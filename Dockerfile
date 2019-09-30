@@ -1,7 +1,7 @@
 FROM mhart/alpine-node:11.9
 MAINTAINER Trey Jones "trey@eyesoreinc.com"
 
-ENV VERSION "7.3.1"
+ENV VERSION "8.3.6"
 ENV WATCHMAN_VERSION '4.9.0'
 
 RUN apk add --update --no-cache python python-dev py-pip \
