@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:11.9
+FROM mhart/alpine-node:12.11
 MAINTAINER Trey Jones "trey@eyesoreinc.com"
 
 ENV VERSION "8.3.6"
@@ -28,13 +28,13 @@ RUN apk del python-dev py-pip automake autoconf linux-headers \
 	bash libtool openssl-dev && \
 	rm -R /containerbuild/watchman
 
-RUN mkdir /ng && mkdir /output
+RUN mkdir /ng && mkdir /ngdist
 
 # mount source
 VOLUME /ng
 
 # mount output dir container
-VOLUME /output
+VOLUME /ngdist
 
 WORKDIR /ng
 
